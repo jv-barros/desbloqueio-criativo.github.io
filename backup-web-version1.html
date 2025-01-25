@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+  <!-- bootstrap 5  -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  <title>Desbloqueio Criativo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Basic", serif;
+      background-color: #f4f4f4;
+
+    }
+
+    /* config all sections  */
+    section {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* section 1 */
+    .section-1 {
+      background: white;
+      text-align: left;
+      display: flex;
+      margin-top: 40px;
+      padding: 80px;
+    }
+
+    .section-1 p {
+      font-size: 2.0rem;
+      color: black;
+      margin-left: 60px;
+
+    }
+
+    .img-section-1 {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      margin-left: 500px;
+      margin-top: -30px;
+    }
+
+
+
+    /* section 2 */
+    .section-2 {
+      background: #c4fc61;
+      color: white;
+      text-align: center;
+
+    }
+
+    .section-2 h2 {
+      font-size: 2.2rem;
+      color: #2e2300;
+      position: relative;
+
+    }
+
+    .box-text {
+      font-size: 1.2rem;
+      background-color: #2e2300;
+      text-align: left;
+    }
+
+    .button-section2 button {
+      background-color: #e68900;
+      color: white;
+      font-size: 2.0rem;
+      align-items: center;
+    }
+
+
+
+    .box-section2-orange-box {
+      background-color: orange;
+      padding: 100px;
+      text-align: center;
+    }
+
+
+    .features {
+      padding: 340px 120px;
+    }
+
+    .hero-two-white {
+      background-color: white;
+      position: relative;
+      top: 500px;
+    }
+
+    /* section 3  */
+    .section-3 h1 {
+      font-size: 2.5rem;
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+    .section-3 p {
+      font-size: 1.4rem;
+    }
+
+    /* section 6 */
+    .cta-section-two {
+      background: #4caf50;
+      text-align: center;
+      padding: 100px 50px;
+      color: white;
+    }
+
+    /* .cta-section-two h2 {
+      margin-bottom: 20px;
+    } */
+
+
+    /* section 4 */
+    .intro-text {
+      color: #000;
+      margin-left: 2rem;
+      line-height: 1.5;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .intro img {
+      width: 400px;
+      margin-top: 1rem;
+    }
+
+    .intro-orange {
+      display: flex;
+      align-items: center;
+    }
+
+    .intro-orange img {
+      width: 400px;
+      margin-top: 1rem;
+    }
+
+    .features-section {
+      display: flex;
+      /* justify-content: space-around; */
+      /* align-items: center; */
+      background-color: #c4fc61;
+      /* padding: 4rem 2rem; */
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      text-align: center;
+      width: 200px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: absolute;
+    }
+
+    /* .card img {
+      width: 50px;
+      margin-bottom: 0.5rem;
+    } */
+
+    /* .card p {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    } */
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    .details-text {
+      font-size: 1.2rem;
+      /* color: #555; */
+      line-height: 1.5;
+      margin-left: 2rem;
+    }
+
+    .details img {
+      width: 400px;
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .cta {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+
+    /* effects */
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(242, 110, 0, 0.6);
+    }
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+  <!-- sections 1 -->
+  <section class="section-1">
+    <br>
+    <p>Encontre sua própria energia<br>
+      criativa e transforme ideias<br>
+      soltas em projetos reais com<br>
+      o autor de <b> Téo & O Mini Mundo</b></b></p>
+    <div class="img-section-1">
+      <img src="./image-section-1.jpg" alt="image-section-1">
+    </div>
+  </section>
+
+  <!-- section 2 -->
+  <section class="section-2" style="background-color: #c4fc61; text-align: center;">
+    <br>
+    <div class="title">
+      <h2 style="font-size: 3rem; line-height: 1.5;">
+        Se você pudesse transformar bloqueios e<br>
+        inseguranças <strong>em energia criativa para tirar<br>
+          seus projetos do papel,</strong> o quanto<br>
+        isso te ajudaria?
+      </h2>
+    </div>
+    <div class="box-text"
+      style="background-color: #2e2300; color: white; padding: 40px; margin: 40px auto; border-top-left-radius: 40px; border-top-right-radius: 40px; text-align: left; font-size: 1rem; line-height: 1.6; margin-left: 40px; margin-right: 40px;">
+      <p>Se você já se sentiu preso diante de uma página em branco, frustrado, sem saber por onde começar, fique comigo.
+        Neste Minicurso Desbloqueio Criativo vou te ensinar as minhas técnicas pessoais para desbloquear a criatividade.
+      </p>
+      <br>
+      <p>A partir de agora, você pode transformar os seus momentos de frustração em um fluxo constante de ideias e
+        realizações.</p>
+      <br>
+      <p>Você vai aprender a identificar o que te trava, superar o medo de errar e criar com mais confiança.</p>
+      <br>
+      <p>Suas ideias ganharão vida e você encontrará um novo ritmo criativo para escrever histórias, projetos
+        artísticos, tirar ideias da gaveta, realizar aquele projeto travado há tanto tempo ou qualquer outro sonho que
+        te inspira.</p>
+      <div class="button-section2" style="position: relative; z-index: 2; margin-left: 300px; ">
+        <button
+          style="background-color: #f26e00; color: white; border: none; padding: 20px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(242, 110, 0, 0.4); transition: transform 0.3s, box-shadow 0.3s; position: absolute; top: 20px; z-index: 3; width: 500px; height: 75px;">
+          Quero desbloquear minha criatividade
+        </button>
+      </div>
+    </div>
+    <div style="background-color: white; margin-top: -40px; ">
+      <div class="box-section2" style="display: flex; justify-content: center; margin-top: 20px;"">
+        <div class="box-section2-text"
+          style="flex: 1; background-color: white; color: black; padding: 70px; text-align: left; font-size: 1.4rem; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); animation: fadeInLeft 1s ease; ">
+          <p>A criatividade é minha principal<br>
+            ferramenta de trabalho há anos. Eu<br>
+            vivo das minhas criações. Por isso,<br>
+            com o tempo desenvolvi ferramentas<br>
+            que mantivessem o meu fluxo de<br>
+            trabalho sempre funcionando, sem<br>
+            bloqueios ou "interrupções mentais".</p>
+          <br>
+          <p>Neste Minicurso vou compartilhar<br>
+            com você como deixar para trás a<br>
+            autocrítica que te paralisa e descobrir<br>
+            um jeito mais fluido de criar.</p>
+          <br>
+          <p>Veja um pouco do meu trabalho:</p>
+        </div>
+
+
+        <!-- inside here the div with carroussel  -->
+        <!-- improve carousel  -->
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 50%; height: auto; display: flex; ">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="./image1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./image2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./image3.jpg" alt="Third slide">
+            </div>
+          </div>
+          
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="background-color: black; margin-top: 600px;">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="background-color: black; margin-top: 600px;">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- section 3 -->
+  <section class="section-3" style="background-color: #2b2000; color: white;;">
+
+    <div style="padding: 80px;">
+      <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; color: #c4fc61; margin-bottom: 40px;">
+        Criatividade NÃO é dom<br> e nem “coisa de artista”</h1>
+      <p style="color: white; margin-left: 40px">
+        E se eu te disser que criatividade não é um dom reservado a artistas ou escritores? Ela está em todos nós,
+        esperando para ser descoberta e utilizada.
+      </p>
+      <br>
+      <p style="margin-left: 40px; color: white;">
+        A criatividade não é algo mágico ou um traço de personalidade de poucas pessoas – é uma habilidade, como andar
+        de bicicleta ou aprender um idioma. E, como qualquer habilidade, ela pode ser desenvolvida com as ferramentas
+        certas e um pouco de prática.
+      </p>
+      <br>
+      <h2 style="margin-left: 40px; ">Seja você é...</h2>
+      <br>
+    </div>
+    <div class="image-and-text" style="display: flex;">
+      <br>
+      <div>
+        <img src="./image1.jpg" alt="Ilustração fundo branco" style="width: 100%; height: auto;">
+      </div>
+      <div style="margin-top: 80px; padding: 80px;">
+        <ul style="list-style: disc; font-size: 1.4rem;">
+          <li>Artista buscando novas ideias</li>
+          <br>
+          <li>Escritor enfrentando o bloqueio da página em branco</li>
+          <br>
+          <li>Um empreendedor precisando inovar</li>
+          <br>
+          <li>Apenas alguém querendo viver de forma mais expressiva</li>
+          <br>
+        </ul>
+      </div>
+    </div>
+
+    <div clas="hero-two-white" style="background-color: white; color: black; margin-top: -20px;"">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style=" margin-left: 20px; padding: 40px;">
+      <p>
+        ...A criatividade está ao seu alcance! Não importa sua área ou experiência, ser criativo é simplesmente
+        encontrar
+        novas maneiras de olhar para o mundo e se conectar com ele.
+      </p>
+      <br>
+      <p>
+        Neste Minicurso, você vai aprender como destravar seu potencial, transformar bloqueios em força e explorar sua
+        própria energia criativa – seja para criar arte, escrever histórias, resolver problemas ou, simplesmente, se
+        expressar.
+      </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+  </section>
+
+  <!-- section 4 -->
+  <section>
+    <!-- intro-orange -->
+    <div class="intro-orange" style="background-color: #d35f18;">
+      <div class="intro-text" style="margin-left: 160px;">
+        <div style="font-size: 2rem;">
+          <h1>
+            Será que o<br>
+            Minicurso<br>
+            Desbloqueio<br>
+            Criativo<br>
+            é para você?
+          </h1>
+        </div>
+        <div style="font-size: 1.0rem; color: white;">
+          <p>
+            Você se reconhece em<br>
+            alguma dessas situações?
+          </p>
+        </div>
+        <img src="./image-orange.png" alt="Pagamento seguro">
+      </div>
+      <div>
+
+        <div style="padding: 160px; color: white;">
+          <ul style="list-style: disc; font-size: 1.2rem;">
+            <li><strong>Frustração constante:</strong> sente que,<br>
+              tem muitas ideias, mas não<br>
+              consegue colocá-las no papel ou<br>
+              dar o próximo passo?<br><br></li>
+            <br>
+            <li><strong>Perda de motivação:</strong> começa<br>
+              projetos com empolgação, mas<br>
+              logo perde o ritmo e desanima<br>
+              antes de concluí-los?<br><br></li>
+            <br>
+            <li><strong>Estagnação criativa:</strong> sente que<br>
+              suas criações parecem repetitivas<br>
+              ou sem a originalidade que você<br>
+              gostaria de alcançar?<br><br></li>
+            <br>
+            <li><strong>Insegurança:</strong> constantemente<br>
+              duvida da qualidade do seu<br>
+              trabalho e teme que ele "não seja<br>
+              bom o suficiente"?</li>
+            <br>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Intro Section -->
+    <div class="intro" style="background-color: white; margin-top: -40px; padding: 80px;">
+      <div class="intro-text" style="font-size: 2.5rem; margin-left: 160px; font-weight: bold;">
+        Se sim, o<br>
+        Minicurso<br>
+        Desbloqueio<br>
+        Criativo foi<br>
+        sim pensado<br>
+        para você.
+      </div>
+      <img src="./image-6.png" alt="Pagamento seguro">
+    </div>
+    <!-- <br><br><br><br><br><br><br> -->
+
+    <!-- Features Section -->
+    <div class="features-section" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; justify-items: center;">
+      <div class="card">
+        <img src="icon-course.png" alt="Curso 100% online">
+        <p><strong>Curso</strong><br>100% online</p>
+      </div>
+      <div class="card">
+        <img src="icon-guarantee.png" alt="Garantia de 7 dias">
+        <p><strong>Garantia incondicional</strong><br>de 7 dias</p>
+      </div>
+      <div class="card">
+        <img src="icon-payment.png" alt="Pagamento seguro">
+        <p><strong>Pagamento</strong><br>totalmente seguro</p>
+      </div>
+    </div>
+    
+
+    <!-- Details Section -->
+    <!-- <br><br><br><br><br><br><br> -->
+    <div class="details" style="background-color: white; padding: 90px; margin-top: -40px;">
+      <div class="details-text">
+        <strong>Formato:</strong> aulas gravadas,<br>
+        assista onde e quando<br>
+        preferir, quantas vezes quiser.<br><br>
+
+        <strong>Início do curso:</strong> Curso já<br>
+        disponível, início imediato.<br><br>
+
+        <strong>Validade:</strong> acesso ilimitado<br>
+        durante 365 dias a partir da<br>
+        inscrição no curso.
+      </div>
+      <img src="./image2.jpg" alt="Curso 100% online">
+    </div>
+  </section>
+  <br>
+
+  <!-- section 5 -->
+  <section style="background-color:#3a2e1f; color: #000; margin-top: -40px;">
+    <!-- brown -->
+    <div style="padding: 40px;">
+      <h2 style="font-size: 3rem; color: white; text-align: center; margin-bottom: 1rem;">
+        Qual o valor do investimento<br>
+        para fazer o Minicurso<br>
+        Desbloqueio Criativo?
+      </h2>
+      <p style="text-align: center; font-size: 2.5rem; font-weight: bold; color: white;">
+        de R$ 247,00 por 12x de <br><span style="color: #c4fc61; font-size: 2.5rem;">R$ 9,88</span>
+      </p>
+      <br>
+    </div>
+    <!-- white -->
+    <div style="background-color: white; padding: 1.5rem; margin-top: 2rem; text-align: center;">
+      <!-- align buttons -->
+      <div style="display: flex; flex-direction: column; align-items: center; position: relative; margin-top: -3rem;">
+        <button
+          style="background-color:#c4fc61; color:#3a2e1f; font-size: 2rem; padding: 0.8rem 2rem; border-radius: 20px; border: none; z-index: 2;">
+          Quero criar com mais confiança e fluidez
+        </button>
+        <button
+          style="font-size: 2rem; color:#3a2e1f; background-color:#f26e00; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px ; padding: 0.8rem 2rem; border: none; margin-top: 3.5rem; z-index: 1; position:absolute">
+          Para quem é esse curso:
+        </button>
+      </div>
+
+
+
+
+      <ul
+        style="list-style: disc; margin-top: 2rem; font-size: 1.6rem; width: 70%; margin: 2rem auto 0; text-align: left; padding-left: 1.5rem; padding: 80px;">
+        <li><strong>Artistas:</strong> descubra como manter um fluxo constante de ideias, criar com mais leveza e
+          transformar frustração em motivação.</li>
+        <br>
+        <li><strong>Escritores:</strong> libere sua imaginação, supere o medo da página em branco e crie narrativas que
+          fluem naturalmente.</li>
+        <br>
+        <li><strong>Empreendedores criativos:</strong> inspire-se para desenvolver soluções originais que
+          diferenciem seu negócio no mercado.</li>
+        <br>
+        <li><strong>Qualquer pessoa:</strong> transforme seu olhar sobre o mundo e libere sua criatividade para viver de
+          forma mais plena e expressiva.</li>
+      </ul>
+    </div>
+    <!-- orange -->
+    <div style="background-color: white; padding: 1.5rem;  margin-bottom: 2rem; text-align: left; columns: 2;">
+      <div
+        style="border-top-right-radius: 40px; border-bottom-right-radius:40px; background-color:  #d35f18; margin-left: -20px; margin-top: -100px; position: absolute; padding: 20px;">
+        <br><br>
+        <p style="font-size: 1.8rem; color: white; margin-left: 30px;">Seja qual for o<br>
+          seu objetivo criativo, o<br>
+          Minicurso Desbloqueio Criativo<br>
+          oferece as ferramentas e<br>
+          técnicas que você precisa para<br>
+          desbloquear seu potencial e<br>
+          começar a criar de verdade!</p>
+        <br><br>
+      </div>
+      <div>
+        <img src="./image-5.jpg" alt="Minicurso Desbloqueio Criativo"
+          style="margin-top: 1rem; width: 400px; margin-left: 800px;">
+      </div>
+    </div>
+    <!-- button green -->
+    <button
+      style="display: block; margin: 2rem auto; background-color:#c4fc61; color:#3a2e1f; font-size: 2rem; padding: 0.8rem 2rem; border: none; border-radius: 20px; cursor: pointer; margin-top: -55px;">
+      Quero acessar as aulas agora
+    </button>
+
+    <!-- fix div green - responsive -->
+    <div style="text-align: center; margin-top: 1rem; line-height: 1.6;">
+      <div style="padding: 40px; ">
+        <h3 style="font-size: 2.5rem; font-weight: bold; color: white;">Conheça Caetano Cury</h3>
+        <p style="font-size: 1rem; color: white;">
+          Caetano Cury é jornalista, capista e quadrinista, autor das premiadas tirinhas Teo<br>
+          & O Mini Mundo. Com uma carreira marcante, Caetano já foi apresentador e repórter<br>
+          na Rádio Bandeirantes de São Paulo, onde ganhou prestigiado prêmio Vladimir<br>
+          Herzog de Jornalismo e Direitos Humanos.
+        </p>
+      </div>
+
+      <div style="display: flex; height:70%;">
+        <div>
+          <img src="./image-avatar.jpg" alt="Minicurso Desbloqueio Criativo" style="margin-top: 60px;">
+        </div>
+
+        <div
+          style="background-color: #c4fc61; border-top-left-radius: 20px; width: 42.25%; height: 75.5%; font-size: 1rem; text-align: left; padding: 20px;">
+          <p style="margin-left: 50px;">
+            Caetano mora hoje em Guaxupé-MG e<br>
+            desde 2019 se dedica em tempo integral à<br>
+            criação de seus quadrinhos. Sua série Téo<br>
+            & O Mini Mundo, seguida por mais de 300<br>
+            mil pessoas no Instagram, encanta<br>
+            leitores com histórias de amor, humor e<br>
+            autoconhecimento. Além das tirinhas,<br>
+            Caetano publicou obras como Jorge, uma<br>
+            coletânea de tirinhas humorísticas, Click<br>
+            Plock, um livro imenso que provoca<br>
+            reflexão sobre o uso excessivo de celular,<br>
+            e O Teatro dos Cavalinhos, um livro<br>
+            experimental que explora a liberdade<br>
+            criativa e o processo de desenvolver<br>
+            narrativas. Pois é, a partir de agora,<br>
+            decidiu que vai também ensinar outras<br>
+            pessoas a se sentirem mais encorajadas a<br>
+            criarem com mais confiança, destacando o<br>
+            seu potencial criativo, a partir das<br>
+            ferramentas que ele mesmo usa.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- section 6 -->
+  <section class="cta-section-two"
+    style="background-color: #f26e00; color: white; text-align: center; margin-top: -20px;">
+    <div>
+      <h2 style="font-size: 2.5rem; font-weight: bold;">Ainda não tem certeza se o Minicurso<br>Desbloqueio Criativo é
+        para você?</h2>
+      <p style="margin: 20px 0; font-size: 1.8rem;">Conheça a garantia incondicional de 7 dias:</p>
+      <br>
+      <p style="margin: 20px 0; font-size: 1.4rem; text-align: left;">Você tem 7 dias de Garantia Incondicional para
+        iniciar o curso e solicitar reembolso, sem burocracia, se não gostar ou não achar que te ajudou.</p>
+      <p style="margin: 20px 0; font-size: 1.4rem; font-weight: bold;text-align: left;">O que isso significa?</p>
+      <p style="margin: 20px 0; font-size: 1.4rem;text-align: left;">Que você pode se inscrever sem riscos. Por 7 dias
+        você pode experimentar e, caso não se adapte, terá todo o dinheiro de volta.</p>
+    </div>
+  </section>
+
+  <!-- section 7 -->
+  <!-- Centered Button Section -->
+  <section>
+    <div style="background-color: white; height: 120px; position: relative;">
+      <a href="#"
+        style="background-color:#c4fc61; color:#3a2e1f; padding: 15px 30px; font-size: 1.5rem; font-weight: bold; text-decoration: none; border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: -50px;">Quero
+        Experimentar</a>
+    </div>
+  </section>
+
+</body>
+
+</html>
