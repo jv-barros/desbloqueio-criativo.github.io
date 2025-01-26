@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
   <!-- bootstrap 5  -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <title>Desbloqueio Criativo</title>
   <style>
     * {
@@ -21,16 +20,24 @@
     }
 
     body {
-      /* font-family: "Basic", serif; */
       background-color: #f4f4f4;
 
     }
 
     /* config all sections  */
     section {
-      max-width: 1200px;
-      margin: auto;
-    }
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  /* Allows section to shrink */
+  box-sizing: border-box;
+  /* Padding doesn't affect width */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  /* Center-aligns content for vertical alignment */
+}
 
     /* section 1 */
     .section-1 {
@@ -39,7 +46,6 @@
       display: flex;
       margin-top: 40px;
       padding: 40px;
-      /* margin-left: 20px; */
     }
 
     .section-1 p {
@@ -57,6 +63,13 @@
       margin-top: -30px;
     }
 
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      /* Center the image */
+    }
 
 
     /* section 2 */
@@ -118,16 +131,12 @@
     }
 
     /* section 6 */
-    .cta-section-two {
+    .section-6 {
       background: #4caf50;
       text-align: center;
       padding: 100px 50px;
       color: white;
     }
-
-    /* .cta-section-two h2 {
-      margin-bottom: 20px;
-    } */
 
 
     /* section 4 */
@@ -159,11 +168,7 @@
     }
 
     .features-section {
-      display: flex;
-      /* justify-content: space-around; */
-      /* align-items: center; */
       background-color: #c4fc61;
-      /* padding: 4rem 2rem; */
     }
 
     .card {
@@ -177,16 +182,6 @@
       position: absolute;
     }
 
-    /* .card img {
-      width: 50px;
-      margin-bottom: 0.5rem;
-    } */
-
-    /* .card p {
-      margin: 0;
-      font-size: 1rem;
-      color: #333;
-    } */
 
     .card:hover {
       transform: translateY(-5px);
@@ -212,20 +207,117 @@
       margin-right: 2rem;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 1.5rem;
-      }
+    /* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  section {
+    max-width: 100%;
+    /* Adjust flex properties to ensure layout adapts properly */
+    align-items: center;
+    text-align: center;
+  }
 
-      .hero p {
-        font-size: 1rem;
-      }
+    /* section 1 */
+  .section-1 {
+    columns: 2;
+  }
 
-      .cta {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-      }
+  .section-1 p{
+    font-size: 20px;
+    margin-left: -100px
+  }
+  .img-section-1 {
+    width: 175px;
+    margin-right: 250px;
+    margin-top: 40px;
+  }
+  
+/* section 2 */
+  #carouselExampleControls {
+    display: none;
+  }
+
+  /* section 3 */
+  .section-3 p {
+    text-align: left;
+  }
+
+  .image-3 {
+    display: none;
+  }
+
+  /* section 4 */
+.section-4 {
+  display: flex;
+  flex-direction: column;  /* Ensures the flex container arranges items in a column */
+  columns: 1;
+  align-items: center;     /* Centers content horizontally */
+  justify-content: center;
+}
+
+.intro-orange {
+  display: flex;
+  flex-direction: column;  /* Ensures the flex container arranges items in a column */
+  align-items: center;     /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  gap: 10px;               /* Adds some space between items */
+}
+
+.intro-orange img {
+  width: 200px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;  /* Ensures the flex container arranges items in a column */
+  align-items: center;     /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  gap: 10px;
+}
+
+
+
+.features-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr; /* Ensures all items are in a single column */
+  gap: 20px; /* Adds space between each item */
+  justify-items: center; /* Centers items horizontally */
+}
+
+.details img {
+  display: none;
+}
+
+/* section 5 */
+.buttons button {
+    font-size: 1.5rem; /* Smaller font size on mobile */
+    padding: 1rem 2rem; /* Adjust padding for smaller screens */
+    width: 90%; /* Make buttons take up most of the screen width */
+  }
+
+  .buttons button:last-child {
+    margin-top: 2.5rem; /* Adjust margin-top for mobile */
+  }
+
+  .text-white-background ul {
+        text-align: justify; /* Justify the text for mobile */
+        width: 100%; /* Make sure the width takes up the full screen */
+        padding: 0px; /* Adjust padding for mobile view */
+        font-size: 10px;
     }
+
+    .orange-text {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        text-align: center; /* Center text alignment */
+    }
+
+    
+
+}
+
+@media (max-width: 480px) {
+  
+}
 
     /* effects */
 
@@ -275,7 +367,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
 </head>
 
 <body>
@@ -283,19 +374,16 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 
-
-
-
-  <!-- sections 1 -->
+  <!-- sections 1 - web and mobile - ok -->
   <section class="section-1">
     <br>
     <p>Encontre sua própria energia<br>
@@ -303,14 +391,14 @@
       soltas em projetos reais com<br>
       o autor de <b> Téo & O Mini Mundo</b></b></p>
     <div class="img-section-1">
-      <img src="./image-section-1.jpg" alt="image-section-1">
+      <img src="./image-section-1.jpg" alt="image-section-1" class="responsive-image">
     </div>
   </section>
 
   <!-- section 2 -->
   <section class="section-2" style="background-color: #c4fc61; text-align: center;">
     <br>
-    <div class="title">
+    <div class="title-section-2">
       <h2 style="font-size: 3rem; line-height: 1.5;">
         Se você pudesse transformar bloqueios e<br>
         inseguranças <strong>em energia criativa para tirar<br>
@@ -334,7 +422,6 @@
         te inspira.</p>
 
       <!-- section with button -->
-      <!-- section with button -->
       <div class="button-section2" style="
   position: relative;
   z-index: 2;
@@ -346,7 +433,7 @@
     color: white;
     border: none;
     padding: 20px 40px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
@@ -383,12 +470,11 @@
         <p>Veja um pouco do meu trabalho:</p>
       </div>
 
-
       <!-- inside here the div with carroussel  -->
       <!-- improve carousel  -->
 
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
-        style="width: 50%; height: auto; display: flex; ">
+        style="width: 50%; height: auto; ">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="./image1.jpg" alt="First slide">
@@ -416,9 +502,8 @@
     </div>
   </section>
 
-
   <!-- section 3 -->
-  <section class="section-3" style="background-color: #2b2000; color: white;;">
+  <section class="section-3" style="background-color: #2b2000; color: white;">
 
     <div style="padding: 80px;">
       <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; color: #c4fc61; margin-bottom: 40px;">
@@ -434,15 +519,14 @@
         certas e um pouco de prática.
       </p>
       <br>
-      <h2 style="margin-left: 40px; ">Seja você é...</h2>
-      <br>
+      <h2 style="margin-left: 40px; ">Se você é...</h2>
     </div>
     <div class="image-and-text" style="display: flex;">
       <br>
-      <div>
+      <div class="image-3">
         <img src="./image1.jpg" alt="Ilustração fundo branco" style="width: 100%; height: auto;">
       </div>
-      <div style="margin-top: 80px; padding: 80px;">
+      <div class="image-3-text" style="margin-top: 80px; padding: 80px;">
         <ul style="list-style: disc; font-size: 1.4rem;">
           <li>Artista buscando novas ideias</li>
           <br>
@@ -482,10 +566,10 @@
   </section>
 
   <!-- section 4 -->
-  <section>
+  <section class="section-4">
     <!-- intro-orange -->
-    <div class="intro-orange" style="background-color: #d35f18;">
-      <div class="intro-text" style="margin-left: 160px;">
+    <div class="intro-orange" style="background-color: #d35f18; padding: 30px;">
+      <div class="intro-text">
         <div style="font-size: 2rem;">
           <h1>
             Será que o<br>
@@ -505,7 +589,7 @@
       </div>
       <div>
 
-        <div style="padding: 160px; color: white;">
+        <div style="padding: 80px; color: white;">
           <ul style="list-style: disc; font-size: 1.2rem;">
             <li><strong>Frustração constante:</strong> sente que,<br>
               tem muitas ideias, mas não<br>
@@ -534,7 +618,7 @@
     <br>
     <!-- Intro Section -->
     <div class="intro" style="background-color: white; margin-top: -40px; padding: 80px;">
-      <div class="intro-text" style="font-size: 2.5rem; margin-left: 160px; font-weight: bold;">
+      <div class="intro-text" style="font-size: 2.5rem; font-weight: bold;">
         Se sim, o<br>
         Minicurso<br>
         Desbloqueio<br>
@@ -544,7 +628,6 @@
       </div>
       <img src="./image-6.png" alt="Pagamento seguro">
     </div>
-    <!-- <br><br><br><br><br><br><br> -->
 
     <!-- Features Section -->
     <div class="features-section"
@@ -563,9 +646,6 @@
       </div>
     </div>
 
-
-    <!-- Details Section -->
-    <!-- <br><br><br><br><br><br><br> -->
     <div class="details" style="background-color: white; padding: 90px; margin-top: -40px;">
       <div class="details-text">
         <strong>Formato:</strong> aulas gravadas,<br>
@@ -585,7 +665,7 @@
   <br>
 
   <!-- section 5 -->
-  <section style="background-color:#3a2e1f; color: #000; margin-top: -40px;">
+  <section class="section-5" style="background-color:#3a2e1f; color: #000; margin-top: -40px;">
     <!-- brown -->
     <div style="padding: 40px;">
       <h2 style="font-size: 3rem; color: white; text-align: center; margin-bottom: 1rem;">
@@ -598,25 +678,25 @@
       </p>
       <br>
     </div>
+
     <!-- white -->
-    <div style="background-color: white; padding: 1.5rem; margin-top: 2rem; text-align: center;">
+    <div style="background-color: white; margin-top: 2rem; text-align: center; padding: 40px;">
       <!-- align buttons -->
-      <div style="display: flex; flex-direction: column; align-items: center; position: relative; margin-top: -3rem;">
+      <div class="buttons" style="display: flex; flex-direction: column; align-items: center; position: relative; margin-top: -3rem;">
         <button
-          style="background-color:#c4fc61; color:#3a2e1f; font-size: 2rem; padding: 0.8rem 2rem; border-radius: 20px; border: none; z-index: 2;">
+          style="background-color:#c4fc61; color:#3a2e1f; font-size: 2rem; padding: 0.8rem 2rem; border-radius: 20px; border: none;">
           Quero criar com mais confiança e fluidez
         </button>
         <button
-          style="font-size: 2rem; color:#3a2e1f; background-color:#f26e00; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px ; padding: 0.8rem 2rem; border: none; margin-top: 3.5rem; z-index: 1; position:absolute">
+          style="font-size: 2rem; color:#3a2e1f; background-color:#f26e00; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px ; padding: 0.8rem 2rem; border: none; margin-top: -0.2rem;">
           Para quem é esse curso:
         </button>
       </div>
 
-
-
-
-      <ul
-        style="list-style: disc; margin-top: 2rem; font-size: 1.6rem; width: 70%; margin: 2rem auto 0; text-align: left; padding-left: 1.5rem; padding: 80px;">
+      
+      <div class="text-white-background" style="align-items: center;">
+        <ul
+        style="list-style: disc; font-size: 1rem; width: 100%; margin: 2rem auto 0; text-align: left; padding-left: 1.5rem; padding: 80px;">
         <li><strong>Artistas:</strong> descubra como manter um fluxo constante de ideias, criar com mais leveza e
           transformar frustração em motivação.</li>
         <br>
@@ -629,13 +709,15 @@
         <li><strong>Qualquer pessoa:</strong> transforme seu olhar sobre o mundo e libere sua criatividade para viver de
           forma mais plena e expressiva.</li>
       </ul>
+      </div>
     </div>
+
     <!-- orange -->
-    <div style="background-color: white; padding: 1.5rem;  margin-bottom: 2rem; text-align: left; columns: 2;">
+    <div class="orange-text" style="background-color: white; padding: 4.5rem;  margin-bottom: 2rem; text-align: left; display: grid; grid-template-columns: repeat(2, 1fr);">
       <div
-        style="border-top-right-radius: 40px; border-bottom-right-radius:40px; background-color:  #d35f18; margin-left: -20px; margin-top: -100px; position: absolute; padding: 20px;">
+        style="border-top-right-radius: 40px; border-bottom-right-radius:40px; background-color:  #d35f18; margin-left: -20px; margin-top: -100px; position: relative; padding: 0px;">
         <br><br>
-        <p style="font-size: 1.8rem; color: white; margin-left: 30px;">Seja qual for o<br>
+        <p style="font-size: 1.4rem; color: white; margin-left: 30px;">Seja qual for o<br>
           seu objetivo criativo, o<br>
           Minicurso Desbloqueio Criativo<br>
           oferece as ferramentas e<br>
@@ -644,64 +726,18 @@
           começar a criar de verdade!</p>
         <br><br>
       </div>
-      <div>
+      <div style=" display: flex; margin-left: auto;">
         <img src="./image-5.jpg" alt="Minicurso Desbloqueio Criativo"
-          style="margin-top: 1rem; width: 400px; margin-left: 800px;">
+          style="width: 300px;">
       </div>
     </div>
+
     <!-- button green -->
     <button
       style="display: block; margin: 2rem auto; background-color:#c4fc61; color:#3a2e1f; font-size: 2rem; padding: 0.8rem 2rem; border: none; border-radius: 20px; cursor: pointer; margin-top: -55px;">
       Quero acessar as aulas agora
     </button>
-
-    <!-- align image and second text and making divs are responsive -->
-    <!-- <div style="text-align: center; margin-top: 1rem; line-height: 1.6; border: 10px solid blue;">
-      <div style="padding: 40px; ">
-        <h3 style="font-size: 2.5rem; font-weight: bold; color: white;">Conheça Caetano Cury</h3>
-        <p style="font-size: 1rem; color: white;">
-          Caetano Cury é jornalista, capista e quadrinista, autor das premiadas tirinhas Teo<br>
-          & O Mini Mundo. Com uma carreira marcante, Caetano já foi apresentador e repórter<br>
-          na Rádio Bandeirantes de São Paulo, onde ganhou prestigiado prêmio Vladimir<br>
-          Herzog de Jornalismo e Direitos Humanos.
-        </p>
-      </div>
-
-      <div style="display: flex; height:70%;">
-        <div>
-          <img src="./image-avatar.jpg" alt="Minicurso Desbloqueio Criativo" style="margin-top: 60px;">
-        </div>
-
-        <div
-          style="background-color: #c4fc61; border-top-left-radius: 20px; width: 42.25%; height: 75.5%; font-size: 1rem; text-align: left; padding: 20px;">
-          <p style="margin-left: 50px;">
-            Caetano mora hoje em Guaxupé-MG e<br>
-            desde 2019 se dedica em tempo integral à<br>
-            criação de seus quadrinhos. Sua série Téo<br>
-            & O Mini Mundo, seguida por mais de 300<br>
-            mil pessoas no Instagram, encanta<br>
-            leitores com histórias de amor, humor e<br>
-            autoconhecimento. Além das tirinhas,<br>
-            Caetano publicou obras como Jorge, uma<br>
-            coletânea de tirinhas humorísticas, Click<br>
-            Plock, um livro imenso que provoca<br>
-            reflexão sobre o uso excessivo de celular,<br>
-            e O Teatro dos Cavalinhos, um livro<br>
-            experimental que explora a liberdade<br>
-            criativa e o processo de desenvolver<br>
-            narrativas. Pois é, a partir de agora,<br>
-            decidiu que vai também ensinar outras<br>
-            pessoas a se sentirem mais encorajadas a<br>
-            criarem com mais confiança, destacando o<br>
-            seu potencial criativo, a partir das<br>
-            ferramentas que ele mesmo usa.
-          </p>
-        </div>
-
-      </div>
-    </div> -->
-    <div style="text-align: center; margin-top: 1rem; line-height: 1.6;">
-      <!-- First Section -->
+    <div style="text-align: center; margin-top: 1rem; line-height: 1.6; ">
       <div style="padding: 40px;">
         <h3 style="font-size: 2.5rem; font-weight: bold; color: white;">Conheça Caetano Cury</h3>
         <p style="font-size: 1rem; color: white;">
@@ -711,10 +747,7 @@
           Herzog de Jornalismo e Direitos Humanos.
         </p>
       </div>
-    
-      <!-- Image and Text Section -->
-      <div
-        style="
+      <div style="
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
@@ -722,28 +755,24 @@
         ">
         <!-- Image Section -->
         <div style="flex: 1 1 300px; text-align: center;">
-          <img
-            src="./image-avatar.jpg"
-            alt="Minicurso Desbloqueio Criativo"
-            style="
+          <img src="./image-avatar.jpg" alt="Minicurso Desbloqueio Criativo" style="
               width: 100%;
               height: 500px;
               margin-top: 60px;
-              border-radius: 10px;
             " />
         </div>
-    
+
         <!-- Text Section -->
-        <div
-          style="
-            flex: 2 1 400px;
+        <div style="
+            flex: 1 1 300px;
             background-color: #c4fc61;
             border-top-left-radius: 20px;
             font-size: 1rem;
             text-align: left;
             padding: 20px;
+            justify-content: center;
           ">
-          <p style="margin-left: 60px; line-height: 1.6;">
+          <p style="line-height: 1.6; margin-left: 40px;">
             Caetano mora hoje em Guaxupé-MG e<br>
             desde 2019 se dedica em tempo integral à<br>
             criação de seus quadrinhos. Sua série Téo<br>
@@ -768,12 +797,14 @@
         </div>
       </div>
     </div>
-    
+
   </section>
 
+
+
+
   <!-- section 6 -->
-  <section class="cta-section-two"
-    style="background-color: #f26e00; color: white; text-align: center; margin-top: -20px;">
+  <section class="section-6" style="background-color: #f26e00; color: white; text-align: center; margin-top: -20px;">
     <div>
       <h2 style="font-size: 2.5rem; font-weight: bold;">Ainda não tem certeza se o Minicurso<br>Desbloqueio Criativo é
         para você?</h2>
@@ -788,8 +819,7 @@
   </section>
 
   <!-- section 7 -->
-  <!-- Centered Button Section -->
-  <section>
+  <section class="section-7">
     <div style="background-color: white; height: 120px; position: relative;">
       <a href="#"
         style="background-color:#c4fc61; color:#3a2e1f; padding: 15px 30px; font-size: 1.5rem; font-weight: bold; text-decoration: none; border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: -50px;">Quero
