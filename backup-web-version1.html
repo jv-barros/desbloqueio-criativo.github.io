@@ -17,6 +17,7 @@
       font-family: "Basic", serif;
       font-weight: 400;
       font-style: normal;
+      
     }
 
     body {
@@ -36,6 +37,7 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  
   /* Center-aligns content for vertical alignment */
 }
 
@@ -46,6 +48,8 @@
       display: flex;
       margin-top: 40px;
       padding: 40px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: #f9f9f9;
+
     }
 
     .section-1 p {
@@ -169,6 +173,10 @@
 
     .features-section {
       background-color: #c4fc61;
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px; 
+      justify-items: center;
     }
 
     .card {
@@ -193,6 +201,8 @@
       justify-content: space-between;
       align-items: flex-start;
       margin-top: 2rem;
+      background-color: white; 
+      padding: 90px; 
     }
 
     .details-text {
@@ -207,6 +217,15 @@
       margin-right: 2rem;
     }
 
+    .orange-text {
+      background-color: white; 
+      padding: 4.5rem;  
+      margin-bottom: 2rem; 
+      text-align: left; 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   section {
@@ -218,7 +237,7 @@
 
     /* section 1 */
   .section-1 {
-    columns: 2;
+    columns: 1;
   }
 
   .section-1 p{
@@ -226,7 +245,7 @@
     margin-left: -100px
   }
   .img-section-1 {
-    width: 175px;
+    width: 125px;
     margin-right: 250px;
     margin-top: 40px;
   }
@@ -277,15 +296,26 @@
 
 
 .features-section {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr; /* Ensures all items are in a single column */
-  gap: 20px; /* Adds space between each item */
-  justify-items: center; /* Centers items horizontally */
-}
+  display: grid; 
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 20px; 
+  justify-items: center;
+  /* border: 10px solid blue; */
+  }
 
-.details img {
-  display: none;
+  .card img {
+    width: 70px;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+.details{
+  display: grid; 
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 20px; 
+  justify-items: center;
 }
 
 /* section 5 */
@@ -630,37 +660,45 @@
     </div>
 
     <!-- Features Section -->
-    <div class="features-section"
-      style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; justify-items: center;">
-      <div class="card">
-        <img src="icon-course.png" alt="Curso 100% online">
-        <p><strong>Curso</strong><br>100% online</p>
-      </div>
-      <div class="card">
-        <img src="icon-guarantee.png" alt="Garantia de 7 dias">
-        <p><strong>Garantia incondicional</strong><br>de 7 dias</p>
-      </div>
-      <div class="card">
-        <img src="icon-payment.png" alt="Pagamento seguro">
-        <p><strong>Pagamento</strong><br>totalmente seguro</p>
-      </div>
-    </div>
+     <!-- change here for better align -->
+<div class="features-section">
 
-    <div class="details" style="background-color: white; padding: 90px; margin-top: -40px;">
-      <div class="details-text">
-        <strong>Formato:</strong> aulas gravadas,<br>
-        assista onde e quando<br>
-        preferir, quantas vezes quiser.<br><br>
+<div class="card">
+  <img src="icon-course.png" alt="Curso 100% online">
+  <p><strong>Curso</strong><br>100% online</p>
+</div>
 
-        <strong>Início do curso:</strong> Curso já<br>
-        disponível, início imediato.<br><br>
+<div class="card">
+  <img src="icon-guarantee.png" alt="Garantia de 7 dias">
+  <p><strong>Garantia incondicional</strong><br>de 7 dias</p>
+</div>
 
-        <strong>Validade:</strong> acesso ilimitado<br>
-        durante 365 dias a partir da<br>
-        inscrição no curso.
-      </div>
-      <img src="./image2.jpg" alt="Curso 100% online">
-    </div>
+<div class="card">
+  <img src="icon-payment.png" alt="Pagamento seguro">
+  <p><strong>Pagamento</strong><br>totalmente seguro</p>
+</div>
+
+</div>
+
+
+
+
+
+    <div class="details">
+  <div class="details-text">
+    <strong>Formato:</strong> aulas gravadas,<br>
+    assista onde e quando<br>
+    preferir, quantas vezes quiser.<br><br>
+
+    <strong>Início do curso:</strong> Curso já<br>
+    disponível, início imediato.<br><br>
+
+    <strong>Validade:</strong> acesso ilimitado<br>
+    durante 365 dias a partir da<br>
+    inscrição no curso.
+  </div>
+  <img src="./image2.jpg" alt="Curso 100% online">
+</div>
   </section>
   <br>
 
@@ -713,7 +751,7 @@
     </div>
 
     <!-- orange -->
-    <div class="orange-text" style="background-color: white; padding: 4.5rem;  margin-bottom: 2rem; text-align: left; display: grid; grid-template-columns: repeat(2, 1fr);">
+    <div class="orange-text">
       <div
         style="border-top-right-radius: 40px; border-bottom-right-radius:40px; background-color:  #d35f18; margin-left: -20px; margin-top: -100px; position: relative; padding: 0px;">
         <br><br>
@@ -820,7 +858,7 @@
 
   <!-- section 7 -->
   <section class="section-7">
-    <div style="background-color: white; height: 120px; position: relative;">
+    <div style="background-color: white; height: 120px; position: relative;   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: #f9f9f9;">
       <a href="#"
         style="background-color:#c4fc61; color:#3a2e1f; padding: 15px 30px; font-size: 1.5rem; font-weight: bold; text-decoration: none; border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: -50px;">Quero
         Experimentar</a>
