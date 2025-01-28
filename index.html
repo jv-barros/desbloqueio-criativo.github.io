@@ -13,7 +13,7 @@
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      /* box-sizing: border-box; */
       font-family: "Basic", serif;
       font-weight: 400;
       font-style: normal;
@@ -31,7 +31,7 @@
   margin: auto;
   width: 100%;
   /* Allows section to shrink */
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   /* Padding doesn't affect width */
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@
       display: flex;
       margin-top: 40px;
       padding: 40px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: #f9f9f9;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: white;
 
     }
 
@@ -85,16 +85,27 @@
     }
 
     .section-2 h2 {
-      font-size: 2.2rem;
+      font-size: 2.5rem; 
+      line-height: 1.5;
       color: #2e2300;
       position: relative;
+      padding: 10px;
 
     }
 
     .box-text {
-      font-size: 1.2rem;
       background-color: #2e2300;
       text-align: left;
+      color: white; 
+      padding: 40px; 
+      margin: 40px auto; 
+      border-top-left-radius: 40px; 
+      border-top-right-radius: 40px; 
+      text-align: left; 
+      font-size: 1.5rem; 
+      line-height: 1.6; 
+      margin-left: 40px; 
+      margin-right: 40px;
     }
 
     .button-section2 button {
@@ -429,15 +440,14 @@
   <section class="section-2" style="background-color: #c4fc61; text-align: center;">
     <br>
     <div class="title-section-2">
-      <h2 style="font-size: 3rem; line-height: 1.5;">
+      <h2>
         Se você pudesse transformar bloqueios e<br>
         inseguranças <strong>em energia criativa para tirar<br>
           seus projetos do papel,</strong> o quanto<br>
         isso te ajudaria?
       </h2>
     </div>
-    <div class="box-text"
-      style="background-color: #2e2300; color: white; padding: 40px; margin: 40px auto; border-top-left-radius: 40px; border-top-right-radius: 40px; text-align: left; font-size: 1rem; line-height: 1.6; margin-left: 40px; margin-right: 40px;">
+    <div class="box-text">
       <p>Se você já se sentiu preso diante de uma página em branco, frustrado, sem saber por onde começar, fique comigo.
         Neste Minicurso Desbloqueio Criativo vou te ensinar as minhas técnicas pessoais para desbloquear a criatividade.
       </p>
@@ -463,7 +473,7 @@
     color: white;
     border: none;
     padding: 20px 40px;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
@@ -533,23 +543,25 @@
   </section>
 
   <!-- section 3 -->
-  <section class="section-3" style="background-color: #2b2000; color: white;">
+  <section class="section-3" style="background-color: #2b2000; color: white; justify-content: center;">
 
     <div style="padding: 80px;">
       <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; color: #c4fc61; margin-bottom: 40px;">
         Criatividade NÃO é dom<br> e nem “coisa de artista”</h1>
-      <p style="color: white; margin-left: 40px">
+      <p style="color: white;">
         E se eu te disser que criatividade não é um dom reservado a artistas ou escritores? Ela está em todos nós,
         esperando para ser descoberta e utilizada.
       </p>
       <br>
-      <p style="margin-left: 40px; color: white;">
+      <p style="color: white;">
         A criatividade não é algo mágico ou um traço de personalidade de poucas pessoas – é uma habilidade, como andar
         de bicicleta ou aprender um idioma. E, como qualquer habilidade, ela pode ser desenvolvida com as ferramentas
         certas e um pouco de prática.
       </p>
       <br>
-      <h2 style="margin-left: 40px; ">Se você é...</h2>
+      <h2 style="margin-bottom: 20px;">Se você é...</h2>
+
+      <br>
     </div>
     <div class="image-and-text" style="display: flex;">
       <br>
@@ -722,7 +734,7 @@
       <!-- align buttons -->
       <div class="buttons" style="display: flex; flex-direction: column; align-items: center; position: relative; margin-top: -3rem;">
         <button
-          style="background-color:#c4fc61; color:#3a2e1f; font-size: 2rem; padding: 0.8rem 2rem; border-radius: 20px; border: none;">
+          style="background-color:#c4fc61; color:#3a2e1f; font-size: 1.5rem; padding: 0.8rem 2rem; border-radius: 20px; border: none;">
           Quero criar com mais confiança e fluidez
         </button>
         <button
@@ -734,7 +746,7 @@
       
       <div class="text-white-background" style="align-items: center;">
         <ul
-        style="list-style: disc; font-size: 1rem; width: 100%; margin: 2rem auto 0; text-align: left; padding-left: 1.5rem; padding: 80px;">
+        style="list-style: disc; font-size: 1.4rem; width: 100%; margin: 2rem auto 0; text-align: left; padding-left: 1.5rem; padding: 80px;">
         <li><strong>Artistas:</strong> descubra como manter um fluxo constante de ideias, criar com mais leveza e
           transformar frustração em motivação.</li>
         <br>
