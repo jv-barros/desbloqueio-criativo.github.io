@@ -61,8 +61,8 @@
 
     .img-section-1 {
       position: absolute;
-      width: 450px;
-      height: 450px;
+      width: auto;
+      height: auto;
       margin-left: 550px;
       margin-top: -30px;
     }
@@ -237,8 +237,19 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @media (min-width: 768px) {
+      .img-section-1 {
+        width: 400px;
+      }
+    }
+
     /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   section {
     max-width: 100%;
     /* Adjust flex properties to ensure layout adapts properly */
@@ -256,8 +267,8 @@
     margin-left: -100px
   }
   .img-section-1 {
-    width: 125px;
-    margin-right: 250px;
+    width: 120px;
+    margin-right: 300px;
     margin-top: 40px;
   }
   
@@ -432,7 +443,7 @@
       soltas em projetos reais com<br>
       o autor de <b> Téo & O Mini Mundo</b></b></p>
     <div class="img-section-1">
-      <img src="./image-section-1.jpg" alt="image-section-1" class="responsive-image">
+      <img src="./Adobe Express - file.jpg" alt="image-section-1" class="responsive-image">
     </div>
   </section>
 
