@@ -116,14 +116,35 @@
       margin-right: 40px;
     }
 
-    .button-section2 button {
-      background-color: #e68900;
-      color: white;
-      font-size: 2.0rem;
-      align-items: center;
+    .button-section2 {
+      position: relative;
+    z-index: 2;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     }
 
+    .button-section2 button {
+      background-color: #f26e00;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(242, 110, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative; /* Change from absolute to relative */
+      z-index: 3;
+      width: 600px;
+      height: 100px;
+      margin-bottom: -100px;
+    }
 
+    .box-section2-text {
+      flex: 1; background-color: white; color: black; padding: 70px; text-align: left; font-size: 1.4rem; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); animation: fadeInLeft 1s ease;
+    }
 
     .box-section2-orange-box {
       background-color: orange;
@@ -143,10 +164,16 @@
     }
 
     /* section 3  */
+    .section-3 {
+      background-color: #2b2000; color: white; justify-content: center;
+    }
+
+    .section-3 .title {
+      padding: 80px;
+    }
+
     .section-3 h1 {
-      font-size: 2.5rem;
-      color: #4caf50;
-      margin-bottom: 10px;
+      font-size: 2.5rem; font-weight: bold; text-align: center; color: #c4fc61; margin-bottom: 40px;
     }
 
     .section-3 p {
@@ -163,6 +190,14 @@
 
 
     /* section 4 */
+
+    .section-4 .intro-orange .intro-text .h1 h1 {font-size: 2rem;}
+
+    .section-4 .intro .intro-text {
+      font-size: 2.5rem; font-weight: bold;
+}
+ 
+
     .intro-text {
       color: #000;
       margin-left: 2rem;
@@ -229,6 +264,7 @@
       /* color: #555; */
       line-height: 1.5;
       margin-left: 2rem;
+      text-align: justify;
     }
 
     .details img {
@@ -243,6 +279,38 @@
       text-align: left; 
       display: grid; 
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* section-5 */
+    .section-5 {
+      background-color:#3a2e1f; color: #000; margin-top: -40px;
+    }
+
+    .section-5 .box-buttons{
+      background-color: white; margin-top: 2rem; text-align: center; padding: 40px;
+    }
+
+    .section-5 .box-buttons .buttons{
+      display: flex; flex-direction: column; align-items: center; position: relative; margin-top: -3rem;    }
+
+    .section-5 .box-buttons .buttons .button1{
+      background-color:#c4fc61; color:#3a2e1f; font-size: 1.5rem; padding: 0.8rem 2rem; border-radius: 20px; border: none;
+    }
+
+    .section-5 .box-buttons .buttons .button2{
+      font-size: 2rem; color:#3a2e1f; background-color:#f26e00; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px ; padding: 0.8rem 2rem; border: none; margin-top: -0.2rem;
+    }
+
+    .section-5 .section-5-text {
+      padding: 40px;
+    }
+
+    .section-5 .section-5-text h2{
+      font-size: 3rem; color: white; text-align: center; margin-bottom: 1rem;
+    }
+
+    .section-5 .section-5-text p{
+      text-align: center; font-size: 2.5rem; font-weight: bold; color: white;
     }
 
     @media (min-width: 768px) {
@@ -266,6 +334,10 @@
     text-align: center;
   }
 
+  .div-center p{
+    font-size: 1.5rem;
+  }
+
     /* section 1 */
   .section-1 {
     columns: 1;
@@ -286,10 +358,43 @@
     display: none;
   }
 
+  .section-2 .title-section-2 h2{
+    font-size: 1.5rem;
+  }
+
+  .section-2 .box-text p{
+    font-size: 1rem;
+  }
+
+  .section-2 .box-text .button-section2 button{
+    font-size: 1rem;
+  }
+
+  .box-section2-text {
+    font-size: 1rem;
+  }
+
   /* section 3 */
+  .section-3 .title h1{
+    font-size: 2rem;
+  }
+
+  .section-3 .title p{
+    font-size: 1.4rem;
+  }
+
+  .section-3 .title p{
+    font-size: 1.4rem;
+  }
+
   .section-3 p {
     text-align: left;
   }
+
+  .section-3 .image-and-text .image-3-text li{
+    font-size: 1.4rem;
+  }
+
 
   .image-3 {
     display: none;
@@ -302,6 +407,14 @@
   columns: 1;
   align-items: center;     /* Centers content horizontally */
   justify-content: center;
+}
+
+.section-4 .intro-orange .intro-text .h1 h1 {
+  font-size: 1.8rem;
+}
+
+.section-4 .intro .intro-text {
+  font-size: 1.8rem;
 }
 
 .intro-orange {
@@ -372,7 +485,28 @@
         text-align: center; /* Center text alignment */
     }
 
-    
+    .section-5 .section-5-text h2 {
+      font-size: 2rem;
+    }
+
+    .section-5 .section-5-text p {
+      font-size: 2rem;
+    }
+
+    .section-5 .section-5-text p span{
+      color: #c4fc61; font-size: 2.5rem;
+    }
+
+    .section-5 .box-buttons .buttons .button1{
+     font-size: 1.5rem;
+     width: auto;
+    }
+
+    .section-5 .box-buttons .buttons .button2{
+      font-size: 2rem;
+      height: 140px;
+    }
+
 
 }
 
@@ -444,6 +578,9 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
 
+
+
+<!-- remove white background and align div -->
 <div class="center-screen">
     <!-- sections 1 - web and mobile - ok -->
     <section class="section-1">
@@ -468,6 +605,7 @@
           isso te ajudaria?
         </h2>
       </div>
+
       <div class="box-text">
         <p>Se você já se sentiu preso diante de uma página em branco, frustrado, sem saber por onde começar, fique comigo.
           Neste Minicurso Desbloqueio Criativo vou te ensinar as minhas técnicas pessoais para desbloquear a criatividade.
@@ -483,38 +621,18 @@
           te inspira.</p>
   
         <!-- section with button -->
-        <div class="button-section2" style="
-    position: relative;
-    z-index: 2;
-    justify-content: center;
-    display: flex;
-    align-items: center;">
-          <button style="
-      background-color: #f26e00;
-      color: white;
-      border: none;
-      padding: 20px 40px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(242, 110, 0, 0.4);
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative; /* Change from absolute to relative */
-      z-index: 3;
-      width: 500px;
-      height: 75px;
-      margin-bottom: -100px;
-    ">
+        <div class="button-section2">
+          <button class="button-2">
             Quero desbloquear minha criatividade
           </button>
         </div>
   
       </div>
+
+
       <div style="background-color: white; margin-top: -40px; ">
         <div class="box-section2" style="display: flex; justify-content: center; margin-top: 20px;"">
-          <div class=" box-section2-text"
-          style="flex: 1; background-color: white; color: black; padding: 70px; text-align: left; font-size: 1.4rem; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); animation: fadeInLeft 1s ease; ">
+          <div class="box-section2-text">
           <p>A criatividade é minha principal<br>
             ferramenta de trabalho há anos. Eu<br>
             vivo das minhas criações. Por isso,<br>
@@ -564,10 +682,10 @@
     </section>
   
     <!-- section 3 -->
-    <section class="section-3" style="background-color: #2b2000; color: white; justify-content: center;">
+    <section class="section-3">
   
-      <div style="padding: 80px;">
-        <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; color: #c4fc61; margin-bottom: 40px;">
+      <div class="title">
+        <h1>
           Criatividade NÃO é dom<br> e nem “coisa de artista”</h1>
         <p style="color: white;">
           E se eu te disser que criatividade não é um dom reservado a artistas ou escritores? Ela está em todos nós,
@@ -589,7 +707,7 @@
         <div class="image-3">
           <img src="./image1.jpg" alt="Ilustração fundo branco" style="width: 100%; height: auto;">
         </div>
-        <div class="image-3-text" style="margin-top: 80px; padding: 80px;">
+        <div class="image-3-text" style="padding: 60px;">
           <ul style="list-style: disc; font-size: 1.4rem;">
             <li>Artista buscando novas ideias</li>
             <br>
@@ -633,7 +751,7 @@
       <!-- intro-orange -->
       <div class="intro-orange" style="background-color: #d35f18; padding: 30px;">
         <div class="intro-text">
-          <div style="font-size: 2rem;">
+          <div class="h1">
             <h1>
               Será que o<br>
               Minicurso<br>
@@ -681,7 +799,7 @@
       <br>
       <!-- Intro Section -->
       <div class="intro" style="background-color: white; margin-top: -40px; padding: 80px;">
-        <div class="intro-text" style="font-size: 2.5rem; font-weight: bold;">
+        <div class="intro-text">
           Se sim, o<br>
           Minicurso<br>
           Desbloqueio<br>
@@ -736,30 +854,28 @@
     <br>
   
     <!-- section 5 -->
-    <section class="section-5" style="background-color:#3a2e1f; color: #000; margin-top: -40px;">
+    <section class="section-5">
       <!-- brown -->
-      <div style="padding: 40px;">
-        <h2 style="font-size: 3rem; color: white; text-align: center; margin-bottom: 1rem;">
+      <div class="section-5-text">
+        <h2>
           Qual o valor do investimento<br>
           para fazer o Minicurso<br>
           Desbloqueio Criativo?
         </h2>
-        <p style="text-align: center; font-size: 2.5rem; font-weight: bold; color: white;">
-          de R$ 247,00 por 12x de <br><span style="color: #c4fc61; font-size: 2.5rem;">R$ 9,88</span>
+        <p>
+          de R$ 247,00 por 12x de <br><span>R$ 9,88</span>
         </p>
         <br>
       </div>
   
       <!-- white -->
-      <div style="background-color: white; margin-top: 2rem; text-align: center; padding: 40px;">
+      <div class="box-buttons">
         <!-- align buttons -->
-        <div class="buttons" style="display: flex; flex-direction: column; align-items: center; position: relative; margin-top: -3rem;">
-          <button
-            style="background-color:#c4fc61; color:#3a2e1f; font-size: 1.5rem; padding: 0.8rem 2rem; border-radius: 20px; border: none;">
+        <div class="buttons">
+          <button class="button1">
             Quero criar com mais confiança e fluidez
           </button>
-          <button
-            style="font-size: 2rem; color:#3a2e1f; background-color:#f26e00; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px ; padding: 0.8rem 2rem; border: none; margin-top: -0.2rem;">
+          <button class="button2">
             Para quem é esse curso:
           </button>
         </div>
@@ -811,10 +927,10 @@
       <div style="text-align: center; margin-top: 1rem; line-height: 1.6; ">
         <div style="padding: 40px;">
           <h3 style="font-size: 2.5rem; font-weight: bold; color: white;">Conheça Caetano Cury</h3>
-          <p style="font-size: 1rem; color: white;">
-            Caetano Cury é jornalista, capista e quadrinista, autor das premiadas tirinhas Teo<br>
-            & O Mini Mundo. Com uma carreira marcante, Caetano já foi apresentador e repórter<br>
-            na Rádio Bandeirantes de São Paulo, onde ganhou prestigiado prêmio Vladimir<br>
+          <p style="font-size: 1rem; color: white; text-align: justify;">
+            Caetano Cury é jornalista, capista e quadrinista, autor das premiadas tirinhas Teo
+            & O Mini Mundo. Com uma carreira marcante, Caetano já foi apresentador e repórter
+            na Rádio Bandeirantes de São Paulo, onde ganhou prestigiado prêmio Vladimir
             Herzog de Jornalismo e Direitos Humanos.
           </p>
         </div>
