@@ -23,6 +23,7 @@
     html {
       padding: 0;
       margin: 0;
+      justify-content: center;
     }
 
     body {
@@ -195,13 +196,24 @@
 
 
     /* section 4 */
+    .section-4 .intro-orange{
+      background-color: #d35f18; 
+      padding: 0px;
+      justify-content: center;
+    }
 
-    .section-4 .intro-orange .intro-text .h1 h1 {font-size: 2rem;}
+    .section-4 .intro-orange .intro-text .h1 h1 {
+      font-size: 2rem;
+      padding: 20px;
+    }
 
     .section-4 .intro .intro-text {
       font-size: 2.5rem; font-weight: bold;
 }
  
+.section-4 .intro {
+  background-color: white; margin-top: -40px; padding: 80px;
+}
 
     .intro-text {
       color: #000;
@@ -261,7 +273,7 @@
       align-items: flex-start;
       margin-top: 2rem;
       background-color: white; 
-      padding: 90px; 
+      padding: 70px; 
     }
 
     .details-text {
@@ -269,7 +281,7 @@
       /* color: #555; */
       line-height: 1.5;
       margin-left: 2rem;
-      text-align: justify;
+      text-align: left;
     }
 
     .details img {
@@ -316,6 +328,15 @@
 
     .section-5 .section-5-text p{
       text-align: center; font-size: 2.5rem; font-weight: bold; color: white;
+    }
+
+    .section-6{
+      
+    }
+
+    .section-7 .section-7-box{
+      background-color: white; height: 120px; position: relative;   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: #f9f9f9;
+      font-size: 1.5rem;
     }
 
     @media (min-width: 768px) {
@@ -402,10 +423,11 @@
   }
 
 
-  .image-3 {
-    display: none;
-    /* width: auto;
-    height: 200px; */
+  .image-3{
+    /* display: none; */
+    width: 600px;
+    height: 600px;
+    margin-top: -100px;
   }
 
   /* section 4 */
@@ -413,8 +435,11 @@
   display: flex;
   flex-direction: column;  /* Ensures the flex container arranges items in a column */
   columns: 1;
-  align-items: center;     /* Centers content horizontally */
   justify-content: center;
+}
+
+.section-4 .intro-orange {
+  padding: 0;
 }
 
 .section-4 .intro-orange .intro-text .h1 h1 {
@@ -427,9 +452,7 @@
 
 .intro-orange {
   display: flex;
-  flex-direction: column;  /* Ensures the flex container arranges items in a column */
-  align-items: center;     /* Centers content horizontally */
-  justify-content: center; /* Centers content vertically */
+  flex-direction: column;  /* Ensures the flex container arranges items in a column *
   gap: 10px;               /* Adds some space between items */
 }
 
@@ -757,7 +780,7 @@
     <!-- section 4 -->
     <section class="section-4">
       <!-- intro-orange -->
-      <div class="intro-orange" style="background-color: #d35f18; padding: 30px;">
+      <div class="intro-orange">
         <div class="intro-text">
           <div class="h1">
             <h1>
@@ -778,7 +801,7 @@
         </div>
         <div>
   
-          <div style="padding: 80px; color: white;">
+          <div style="padding: 20px; color: white;">
             <ul style="list-style: disc; font-size: 1.2rem;">
               <li><strong>Frustração constante:</strong> sente que,<br>
                 tem muitas ideias, mas não<br>
@@ -806,13 +829,13 @@
       </div>
       <br>
       <!-- Intro Section -->
-      <div class="intro" style="background-color: white; margin-top: -40px; padding: 80px;">
+      <div class="intro">
         <div class="intro-text">
-          Se sim, o<br>
+          Se sim, o
           Minicurso<br>
-          Desbloqueio<br>
+          Desbloqueio
           Criativo foi<br>
-          sim pensado<br>
+          sim pensado
           para você.
         </div>
         <img src="./image-6.png" alt="Pagamento seguro">
@@ -853,7 +876,7 @@
       disponível, início imediato.<br><br>
   
       <strong>Validade:</strong> acesso ilimitado<br>
-      durante 365 dias a partir da<br>
+      durante 365 dias a partir da
       inscrição no curso.
     </div>
     <img src="./image2.jpg" alt="Curso 100% online">
@@ -1001,21 +1024,21 @@
     <!-- section 6 -->
     <section class="section-6" style="background-color: #f26e00; color: white; text-align: center; margin-top: -20px;">
       <div>
-        <h2 style="font-size: 2.5rem; font-weight: bold;">Ainda não tem certeza se o Minicurso<br>Desbloqueio Criativo é
+        <h2 style="font-size: 2rem; font-weight: bold;">Ainda não tem certeza se o Minicurso<br>Desbloqueio Criativo é
           para você?</h2>
-        <p style="margin: 20px 0; font-size: 1.8rem;">Conheça a garantia incondicional de 7 dias:</p>
+        <p style="margin: 20px 0; font-size: 1.5rem;">Conheça a garantia incondicional de 7 dias:</p>
         <br>
-        <p style="margin: 20px 0; font-size: 1.4rem; text-align: left;">Você tem 7 dias de Garantia Incondicional para
+        <p style="margin: 20px 0; font-size: 1rem; text-align: left;">Você tem 7 dias de Garantia Incondicional para
           iniciar o curso e solicitar reembolso, sem burocracia, se não gostar ou não achar que te ajudou.</p>
-        <p style="margin: 20px 0; font-size: 1.4rem; font-weight: bold;text-align: left;">O que isso significa?</p>
-        <p style="margin: 20px 0; font-size: 1.4rem;text-align: left;">Que você pode se inscrever sem riscos. Por 7 dias
+        <p style="margin: 20px 0; font-size: 1rem; font-weight: bold;text-align: left;">O que isso significa?</p>
+        <p style="margin: 20px 0; font-size: 1rem;text-align: left;">Que você pode se inscrever sem riscos. Por 7 dias
           você pode experimentar e, caso não se adapte, terá todo o dinheiro de volta.</p>
       </div>
     </section>
   
     <!-- section 7 -->
     <section class="section-7">
-      <div style="background-color: white; height: 120px; position: relative;   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: #f9f9f9;">
+      <div class="section-7-box">
         <a href="#"
           style="background-color:#c4fc61; color:#3a2e1f; padding: 15px 30px; font-size: 1.5rem; font-weight: bold; text-decoration: none; border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: -50px;">Quero
           Experimentar</a>
