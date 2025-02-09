@@ -158,10 +158,8 @@
       padding: 340px 120px;
     }
 
-    .hero-two-white {
-      background-color: white;
-      position: relative;
-      top: 500px;
+    .section-3 .hero-two-white {
+      background-color: white; color: black; margin-top: -20px;
     }
 
     /* section 3  */
@@ -275,7 +273,7 @@
     }
 
     .details-text {
-      font-size: 1rem;
+      font-size: 2rem;
       /* color: #555; */
       line-height: 1.5;
       margin-left: 2rem;
@@ -294,6 +292,10 @@
       text-align: left; 
       display: grid; 
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .orange-box {
+      border-top-right-radius: 40px; border-bottom-right-radius:40px; background-color:  #d35f18; margin-left: -20px; margin-top: -100px; position: relative; padding: 20px;
     }
 
     /* section-5 */
@@ -328,6 +330,9 @@
       text-align: center; font-size: 2.5rem; font-weight: bold; color: white;
     }
 
+    .section-5 .section-5-text p span{
+      color: #c4fc61; font-size: 3.5rem;
+    }
 
     .section-5 .text-white-background ul{
       list-style: disc; 
@@ -335,7 +340,7 @@
       width: 100%; 
       margin: 2rem auto 0; 
       text-align: left; 
-      padding: 80px;
+      padding: 50px;
     }
 
 
@@ -424,6 +429,7 @@
 
   .section-3 p {
     text-align: left;
+    font-size: 1rem;
   }
 
   .image-and-text {
@@ -491,7 +497,9 @@
   gap: 10px;
 }
 
-
+.details-text {
+      font-size: 1rem;
+    }
 
 .features-section {
   display: grid; 
@@ -528,6 +536,10 @@
     margin-top: 2.5rem; /* Adjust margin-top for mobile */
   }
 
+  .text-white-background {
+    padding: 20px;
+  }
+
   .text-white-background ul {
         width: 100%; /* Make sure the width takes up the full screen */
         font-size: 5px;
@@ -536,6 +548,12 @@
     .orange-text {
         grid-template-columns: 1fr; /* Stack items vertically */
         text-align: left; /* Center text alignment */
+        font-size: 10px;
+        padding: 20px;
+    }
+
+    .orange-box {
+      padding: 10px;
     }
 
     .section-5 .section-5-text h2 {
@@ -547,7 +565,7 @@
     }
 
     .section-5 .section-5-text p span{
-      color: #c4fc61; font-size: 2.5rem;
+      color: #c4fc61; font-size: 3.5rem;
     }
 
     .section-5 .box-buttons .buttons .button1{
@@ -558,6 +576,11 @@
     .section-5 .box-buttons .buttons .button2{
       font-size: 2rem;
       height: 140px;
+    }
+
+    .hero-two-white {
+      padding: 20px;
+      font-size: 10px;
     }
 
 
@@ -761,7 +784,7 @@
 
 
         <div class="image-3">
-          <img src="./image1.jpg" alt="Ilustração fundo branco" style="width: 100%; height: auto;">
+          <img src="./image1.jpg" alt="Ilustração fundo branco" style="width: 70%; height: auto;">
         </div>
 
 
@@ -795,12 +818,9 @@
         </div>
       </div>
   
-      <div clas="hero-two-white" style="background-color: white; color: black; margin-top: -20px;"">
-      <br>
-      <br>
-      <br>
-      <br>
-      <div style=" margin-left: 20px; padding: 40px;">
+      <div class="hero-two-white">
+      
+      <div style="margin-left: 20px; padding: 40px;">
         <p>
           ...A criatividade está ao seu alcance! Não importa sua área ou experiência, ser criativo é simplesmente
           encontrar
@@ -813,10 +833,6 @@
           expressar.
         </p>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
       </div>
     </section>
   
@@ -974,8 +990,7 @@
   
       <!-- orange -->
       <div class="orange-text">
-        <div
-          style="border-top-right-radius: 40px; border-bottom-right-radius:40px; background-color:  #d35f18; margin-left: -20px; margin-top: -100px; position: relative; padding: 20px;">
+        <div class="orange-box">
           <br><br>
           <p style="font-size: 1.2rem; color: white; margin-left: 30px;">Seja qual for o<br>
             seu objetivo criativo, o<br>
@@ -986,7 +1001,7 @@
             começar a criar de verdade!</p>
           <br><br>
         </div>
-        <div style=" display: flex; margin-left: auto;">
+        <div style="display: flex; margin-left: auto;"">
           <img src="./image-5.jpg" alt="Minicurso Desbloqueio Criativo"
             style="width: 300px;">
         </div>
