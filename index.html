@@ -14,22 +14,22 @@
       /* margin: 0;
       padding: 0; */
       font-family: "Basic", serif;
-      font-weight: 400;
+      font-weight: 800;
       font-style: normal;
       
     }
 
-    html {
+
+    /* html {
       justify-content: center;
       
-    }
+    } */
 
     body {
       background-color: #f4f4f4;
       align-items: center;
       margin: auto;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: white;
-
 
     }
 
@@ -46,7 +46,7 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  
+  line-height: 1.3;  
   /* Center-aligns content for vertical alignment */
 }
 
@@ -95,7 +95,7 @@
 
     .section-2 h2 {
       font-size: 2.5rem; 
-      line-height: 1.5;
+      /* line-height: 1.5; */
       color: #2e2300;
       position: relative;
       padding: 10px;
@@ -112,7 +112,7 @@
       border-top-right-radius: 40px; 
       text-align: left; 
       font-size: 1.5rem; 
-      line-height: 1.6; 
+      /* line-height: 1.6;  */
       margin-left: 40px; 
       margin-right: 40px;
     }
@@ -132,7 +132,7 @@
       padding: 20px 40px;
       font-size: 2rem;
       font-weight: bold;
-      border-radius: 30px;
+      border-radius: 50px;
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(242, 110, 0, 0.4);
       transition: transform 0.3s, box-shadow 0.3s;
@@ -194,7 +194,7 @@
     /* section 4 */
     .section-4 .intro-orange{
       background-color: #d35f18; 
-      padding: 0px;
+      padding: 40px;
       justify-content: center;
     }
 
@@ -213,7 +213,7 @@
     .intro-text {
       color: #000;
       margin-left: 2rem;
-      line-height: 1.5;
+      /* line-height: 1.5; */
     }
 
     .intro {
@@ -254,6 +254,7 @@
       width: 200px;
       transition: transform 0.3s, box-shadow 0.3s;
       position: absolute;
+      font-size: 18px;
     }
 
 
@@ -274,7 +275,7 @@
     .details-text {
       font-size: 2rem;
       /* color: #555; */
-      line-height: 1.5;
+      /* line-height: 1.5; */
       margin-left: 2rem;
       text-align: left;
     }
@@ -314,11 +315,11 @@
       display: flex; flex-direction: column; align-items: center; position: relative; margin-top: -3rem;    }
 
     .section-5 .box-buttons .buttons .button1{
-      background-color:#c4fc61; color:#3a2e1f; font-size: 1.5rem; padding: 0.8rem 2rem; border-radius: 20px; border: none;
+      background-color:#c4fc61; color:#3a2e1f; font-size: 1.5rem; padding: 1.6rem 4rem; border-radius: 50px; border: none;
     }
 
     .section-5 .box-buttons .buttons .button2{
-      font-size: 2rem; color:#3a2e1f; background-color:#f26e00; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px ; padding: 0.8rem 2rem; border: none; margin-top: -0.2rem;
+      font-size: 2rem; color:#3a2e1f; background-color:#f26e00; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px ; padding: 1.6rem 4rem; border: none; margin-top: -0.2rem;
     }
 
     .section-5 .section-5-text {
@@ -577,13 +578,17 @@
     }
 
     .section-5 .box-buttons .buttons .button1{
-     font-size: 1.5rem;
-     width: auto;
+     font-size: 1rem;
+     width: 350px;
+     /* width: auto; */
+     padding: 20px;
     }
 
     .section-5 .box-buttons .buttons .button2{
-      font-size: 2rem;
-      height: 140px;
+      font-size: 1.5rem;
+      width: 250px;
+      /* height: 120px; */
+      padding: 10px;
     }
 
     .hero-two-white {
@@ -690,7 +695,7 @@
         </h2>
       </div>
 
-      <div class="box-text">
+      <div class="box-text" style="box-shadow: rgba(0, 0, 0, 1) 0px 4px 80px;">
         <p>Se você já se sentiu preso diante de uma página em branco, frustrado, sem saber por onde começar, fique comigo.
           Neste Minicurso Desbloqueio Criativo vou te ensinar as minhas técnicas pessoais para desbloquear a criatividade.
         </p>
@@ -912,19 +917,19 @@
        <!-- change here for better align -->
   <div class="features-section">
   
-  <div class="card">
+  <div class="card" style="box-shadow: rgba(0, 0, 0, 1) 0px 4px 80px; border-radius: 20px;">
     <img src="./aula-online.png" alt="Curso 100% online">
     <br>
     <p><strong>Curso</strong><br>100% online</p>
   </div>
   
-  <div class="card">
+  <div class="card" style="box-shadow: rgba(0, 0, 0, 1) 0px 4px 80px; border-radius: 20px;">
     <img src="./certificado-de-garantia.png" alt="Garantia de 7 dias">
     <br>
     <p><strong>Garantia incondicional</strong><br>de 7 dias</p>
   </div>
   
-  <div class="card">
+  <div class="card" style="box-shadow: rgba(0, 0, 0, 1) 0px 4px 80px; border-radius: 20px;">
     <img src="./trava-de-seguranca.png" alt="Pagamento seguro">
     <br>
     <p><strong>Pagamento</strong><br>totalmente seguro</p>
@@ -1020,10 +1025,10 @@
   
       <!-- button green -->
       <button
-        style="display: block; margin: 2rem auto; background-color:#c4fc61; color:#3a2e1f; font-size: 1.5rem; padding: 0.8rem 2rem; border: none; border-radius: 20px; cursor: pointer; margin-top: -55px;">
+        style="display: block; margin: 2rem auto; background-color:#c4fc61; color:#3a2e1f; font-size: 1.5rem; padding: 0.8rem 2rem; border: none; border-radius: 50px; cursor: pointer; margin-top: -55px;">
         Quero acessar as aulas agora
       </button>
-      <div style="text-align: center; margin-top: 1rem; line-height: 1.6; ">
+      <div style="text-align: center; margin-top: 1rem; ">
         <div style="padding: 10px;">
           <h3 style="font-size: 2.5rem; font-weight: bold; color: white; padding: 10px;">Conheça <br>Caetano Cury</h3>
           <p style="font-size: 1rem; color: white; text-align: left; padding: 10px;">
@@ -1108,7 +1113,7 @@
     <section class="section-7">
       <div class="section-7-box">
         <a href="#"
-          style="background-color:#c4fc61; color:#3a2e1f; padding: 15px 30px; font-size: 1.5rem; font-weight: bold; text-decoration: none; border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: -50px;">Quero
+          style="background-color:#c4fc61; color:#3a2e1f; padding: 15px 30px; font-size: 1.5rem; font-weight: bold; text-decoration: none; border-radius: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: -50px;">Quero
           Experimentar</a>
       </div>
     </section>
