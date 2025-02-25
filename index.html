@@ -16,10 +16,9 @@
       font-family: "Basic", serif;
       font-weight: bolder;
       font-style: normal;
-      margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Ensures padding/margin don’t affect width */
-  overflow-x: hidden;
+      padding: 0;
+      box-sizing: border-box;
+      
       
     }
 
@@ -33,16 +32,16 @@
       background-color: #f4f4f4;
       align-items: center;
       margin: auto;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; 
       max-width: 100%;
   overflow-x: hidden;
-
+  padding: 100px;
     }
 
 
     /* config all sections  */
     section {
-  max-width: 100%;
+      max-width: 100%;
   margin: auto;
   width: 100%;
   /* Allows section to shrink */
@@ -59,13 +58,11 @@
     /* section 1 */
     .section-1 {
       background: white;
-      text-align: center;
+      text-align: left;
       display: flex;
       margin-top: 40px;
-      padding: 20px;
+      padding: 60px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; padding: 20px; background-color: white;
-      flex-direction: column; /* Ensures a proper stack */
-
 
     }
 
@@ -77,15 +74,12 @@
     }
 
     .img-section-1 {
-      position: relative;
+      position: absolute;
       width: auto;
       height: auto;
-      margin: 20px auto;
-      max-width: 90%;
-      width: 400px;
-      margin-left: 750px;
-      margin-top: -200px;
-        }
+      margin-left: 550px;
+      margin-top: -30px;
+    }
 
     .responsive-image {
       max-width: 100%;
@@ -143,6 +137,7 @@
       border: none;
       padding: 20px 40px;
       font-size: 2rem;
+      ;
       border-radius: 50px;
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(242, 110, 0, 0.4);
@@ -150,9 +145,9 @@
       position: relative; /* Change from absolute to relative */
       z-index: 3;
       max-width: 100%;
+      width: 600px;
       height: 100px;
       margin-bottom: -100px;
-      width: 90%;
     }
 
     .box-section2-text {
@@ -237,9 +232,8 @@
 
     .intro img {
       max-width: 100%;
-      width: 500px;
+      width: 600px;
       margin-top: 1rem;
-      height: auto;
     }
 
     .intro-orange {
@@ -249,9 +243,7 @@
 
     .intro-orange img {
       width: 400px;
-      max-width: 100%;
       margin-top: 1rem;
-      height: auto;
     }
 
     .features-section {
@@ -270,9 +262,8 @@
       text-align: center;
       width: 200px;
       transition: transform 0.3s, box-shadow 0.3s;
-      /* position: absolute; */
+      position: absolute;
       font-size: 18px;
-      position: relative;
     }
 
 
@@ -375,12 +366,11 @@
       font-size: 1.5rem;
     }
 
-    /* @media (min-width: 768px) {
+    @media (min-width: 768px) {
       .img-section-1 {
         width: 400px;
-        margin-top: -200px;
       }
-    } */
+    }
 
     /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
@@ -403,9 +393,7 @@
 
     /* section 1 */
   .section-1 {
-    flex-direction: column;
-    padding: 10px;
-    /* columns: 1; */
+    columns: 1;
   }
 
   .section-1 p{
@@ -414,8 +402,8 @@
   }
   .img-section-1 {
     width: 120px;
-    margin-left: 250px;
-    margin-top: -80px;
+    margin-right: 300px;
+    margin-top: 40px;
   }
   
 /* section 2 */
@@ -433,7 +421,6 @@
 
   .section-2 .box-text .button-section2 button{
     font-size: 1rem;
-    width: 100%;
   }
 
   .box-section2-text {
@@ -1071,7 +1058,7 @@
             <img src="./image-avatar.jpg" alt="Minicurso Desbloqueio Criativo" style="
                 width: 100%;
                 height: 100%;
-                margin-top: 110px;
+                margin-top: 160px;
               " />
           </div>
   
